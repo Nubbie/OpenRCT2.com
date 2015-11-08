@@ -1,0 +1,417 @@
+*
+{
+	padding: 0;
+	margin: 0;
+	font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	cursor: default;
+}
+
+html, body
+{
+	background-color: #F8F8F8;
+}
+
+body
+{
+	color: #212121;
+}
+
+.fleft
+{
+	float: left;
+}
+
+.fright
+{
+	float: right;
+}
+
+.fclear:after
+{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+a, button
+{
+	cursor: pointer !important;
+}
+
+a
+{
+	text-decoration: none;
+}
+
+#container
+{
+	max-width: calc(100% - 20px);
+	width: 640px;
+	margin: 0 auto;
+}
+
+header
+{
+	max-width: 800px;
+	margin: 6px 0px;
+}
+
+header > img
+{
+	margin-right: 10px;
+}
+
+header h1
+{
+	font-size: 26px;
+	margin: 16px 0;
+	letter-spacing: 1px;
+}
+
+nav
+{
+	background-color: #3F5353;
+	min-height: 40px;
+	width: 100%;
+	border: 2px solid #5B7373;
+	box-sizing: border-box;
+}
+
+nav > ul
+{
+	list-style: none;
+	clear: both;
+}
+
+nav > ul li
+{
+	border-left: 1px solid #5B7373;
+	padding: 0px 10px;
+	height: 100%;
+	line-height: 36px;
+	float: left;
+}
+
+nav > ul li:first-child
+{
+	/*padding: 0px 10px 0px 0px;*/
+	border-left: 0px dotted #FFF;
+}
+
+nav > ul li a
+{
+	color: #FFF;
+	font-size: 18px;
+	font-weight: bold;
+	text-shadow: 0 0 1px #172323;
+}
+
+nav > ul li a:hover
+{
+	text-decoration: underline;
+}
+
+section.page
+{
+	margin: 6px 0;
+	color: #3F3F3F;
+}
+
+section.page a
+{
+	text-decoration: underline;
+	color: #B00;
+}
+
+section.page a:hover
+{
+	color: #E00000;
+}
+
+section.page h1, section.page h2, section.page h3
+{
+	color: #212121;
+}
+
+section.page p, section.page > div, section.page ul
+{
+	color: #3F3F3F;
+	font-size: 16px;
+	display: block;
+	margin-bottom: 8px;
+}
+
+section.page p
+{
+	text-align: justify;
+}
+
+section.page h2
+{
+	font-size: 18px;
+}
+
+.buildStatus
+{
+	border-radius: 4px;
+	color: #FFF;
+	text-align: center;
+	padding: 0 3px;
+}
+
+div.buildStatus
+{
+	display: inline-block;
+}
+
+.buildStatus.success
+{
+	background-color: #009B0C;
+}
+
+.buildStatus.unknown
+{
+	background-color: #007A99;
+}
+
+.buildStatus.failed
+{
+	background-color: #9E0000;
+}
+
+section.page.downloadPage div.buildLog
+{
+	font-family: 'Consolas', "Courier New", Courier, monospace;
+	font-size: 11px;
+	margin-bottom: 6px;
+}
+
+section.page.downloadPage table
+{
+	margin-bottom: 6px;
+	width: 100%;
+}
+
+section.page.downloadPage table.downloadsWaterfall tbody
+{
+	font-size: 10px;
+}
+
+section.page.downloadPage table.downloadsLinks tbody
+{
+	font-size: 14px;
+}
+
+section.page.downloadPage table.downloadsWaterfall tbody tr td:first-child
+{
+	width: 100px;
+}
+
+section.page.downloadPage table td.size
+{
+	text-align: right;
+}
+
+section.page.downloadPage table thead tr td
+{
+	font-weight: bold;
+}
+
+section.page.downloadPage table.downloadsWaterfall tbody tr:first-child
+{
+	font-size: 18px;
+	font-weight: bold;
+}
+
+section.page.downloadPage table.downloadsWaterfall tbody tr:nth-child(2)
+{
+	font-size: 17px;
+}
+
+section.page.downloadPage table.downloadsWaterfall tbody tr:nth-child(3)
+{
+	font-size: 16px;
+}
+
+section.page.downloadPage table.downloadsWaterfall tbody tr:nth-child(4)
+{
+	font-size: 15px;
+}
+
+section.page.downloadPage table.downloadsWaterfall tbody tr:nth-child(5)
+{
+	font-size: 14px;
+}
+
+section.page.downloadPage table.downloadsWaterfall tbody tr:nth-child(6)
+{
+	font-size: 13px;
+}
+
+section.page.downloadPage table.downloadsWaterfall tbody tr:nth-child(7)
+{
+	font-size: 12px;
+}
+
+section.page.downloadPage .downloadWarning
+{
+	background-color: #B34F4F;
+	border: 1px solid #D77F7F;
+	font-size: 16px;
+	padding: 5px;
+	display: inline-block;
+}
+
+section.page.downloadPage .downloadWarning, section.page.downloadPage .downloadWarning a
+{
+	color: #FFBFBF;
+	font-weight: bold;
+}
+
+section.page.downloadPage .downloadDetails a.downloadLink
+{
+	font-size: 12px;
+}
+
+section.page.downloadPage .warning
+{
+	background-color: #B34F4F;
+	border: 1px solid #D77F7F;
+	font-size: 16px;
+	padding: 5px;
+}
+
+section.page.downloadPage .warning, section.page.downloadPage .warning a
+{
+	color: #FFBFBF;
+	font-weight: bold;
+}
+
+section.page.downloadPage .downloadButtons > a
+{
+	background-color: #B34F4F;
+	border: 1px solid #D77F7F;
+	font-size: 18px;
+	padding: 5px;
+	width: calc(50% - 5px);
+	display: block;
+	box-sizing: border-box;
+	color: #FFBFBF;
+	font-weight: bold;
+	text-align: center;
+	min-height: 40px;
+	line-height: 28px;
+}
+
+section.page.downloadPage .downloadButtons > a.stable
+{
+	background-color: #50B258;
+	border: 1px solid #80D687;
+	color: #BFFFC4;
+}
+
+section.page.downloadPage .downloadButtons > a.develop
+{
+	background-color: #4F68AF;
+	border: 1px solid #7E95D3;
+	color: #BFD0FF;
+}
+
+section.page.commitsPage table
+{
+	/*font-size: 10px;*/
+	margin-bottom: 6px;
+	width: 100%;
+}
+
+section.page.commitsPage div.commitMessage, section.page.commitsPage table tbody tr td.message
+{
+	/*font-family: 'Consolas', "Courier New", Courier, monospace;
+	font-size: 11px;*/
+}
+
+section.page.commitsPage table tr td.age
+{
+
+}
+
+section.page.commitsPage div.commitMessage
+{
+	margin-bottom: 6px;
+}
+
+section.page.commitsPage table thead tr td
+{
+	font-weight: bold;
+}
+
+section.page.commitsPage table tr td
+{
+	vertical-align: top;
+}
+
+section.page.commitsPage .commitsDetails a.commitsLink
+{
+	font-size: 12px;
+}
+
+footer
+{
+	text-align: center;
+	margin: 10px auto;
+	
+}
+
+footer, footer a
+{
+	color: #4C2C24;
+	font-size: 14px;
+}
+
+footer a
+{
+	text-decoration: underline;
+}
+
+ul
+{
+	list-style-position: inside;
+}
+
+.homeBanner
+{
+	width: 100%;
+	overflow: hidden;
+	border-radius: 5px;
+}
+
+ul.table li
+{
+	width: 50%;
+	margin: 3px 0;
+}
+
+.changesTable
+{
+	font-size: 14px;
+}
+
+.changesTable tbody td
+{
+	vertical-align: top;
+}
+
+.changesTable tbody td.message
+{
+	font-size: 14px;
+}
+
+.changesTable tbody td
+{
+	border-bottom: 1px solid #EEE;
+}
+
+.changesTable tbody tr:last-child td
+{
+	border-bottom: 0px;
+}
