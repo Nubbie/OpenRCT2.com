@@ -122,8 +122,6 @@
 			header('Location: /'. $page->identifier);
 			exit;
 		}
-
-
 	}
 
 	
@@ -251,7 +249,7 @@ foreach ($commits as $commit)
 		require(INCLUDES_PATH . DIRECTORY_SEPARATOR . 'header.inc.php');
 
 		$downloads = $db->readQueryMulti('SELECT * FROM `downloads` ORDER BY `downloadId` DESC LIMIT 0,20');
-		if ($downloads == false)
+		if (!$downloads)
 		{
 ?>
 <section class="page downloadPage">
@@ -266,6 +264,25 @@ foreach ($commits as $commit)
 
 			exit;
 		}
+
+		//$lastDownload = end($downloads);
+		$foundStableDownload = false;
+		foreach ($downloads as $download)
+		{
+			if ($download->gitBranch !== 'master')
+				continue;
+
+			$foundStableDownload = true;
+			break;
+		}
+
+		if (!$foundStableDownload) {
+			$stableDownloads = $db->readQueryMulti('SELECT * FROM `downloads` WHERE `gitBranch` = \'master\' ORDER BY `downloadId` DESC LIMIT 0,1');
+			if ($stableDownloads) {
+				$downloads = array_merge($downloads, $stableDownloads);
+			}
+		}
+		
 ?>
 <section class="page downloadPage">
 	<h1>Downloads</h1>
